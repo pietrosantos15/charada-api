@@ -3,13 +3,18 @@ import random  # Biblioteca para escolher charadas aleatoriamente
 from flask_cors import CORS  # Permite requisições de diferentes origens (Cross-Origin Resource Sharing)
 import firebase_admin
 from firebase_admin import credentials, firestore
-import os, json
+import os
+import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Inicializa o aplicativo Flask
 app = Flask(__name__)
 CORS(app)  # Habilita o CORS para permitir requisições de outras origens
-FBKey = json.loads(os.getenv('CONFIG_FIREBASE'))
 
+
+FBKey = json.loads(os.getenv('CONFIG_FIREBASE'))
 
 # Conecta ao Firestore usando um arquivo de credenciais JSON
 cred = credentials.Certificate(FBKey)
