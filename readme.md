@@ -26,18 +26,12 @@ Este projeto é um sistema web construído utilizando Flask e Firestore (Firebas
 ![image](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![image](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
-## Como usar
+## Autores
+- Pietro Freire Rezende dos Santos - GitHub - [pietrosantos15](https://github.com/pietrosantos15)
 
-### 🔧 Pré-requisitos
-Antes de rodar o projeto, certifique-se de ter instalado:
-- [Python 3.10+](https://www.python.org/)
-- [Pip](https://pip.pypa.io/en/stable/)
-- Um arquivo de credenciais Firebase: `ServiceAcccountKey.json`  
-> Você deve obter esse arquivo ao criar um projeto no [Firebase Console](https://console.firebase.google.com/) e configurar o Firestore.
+## Link Vercel
+https://charada-api.vercel.app/
 
-### 📥 Instalação
+## Status
+✅ Concluído ✅
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
