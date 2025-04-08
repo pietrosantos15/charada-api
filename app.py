@@ -7,7 +7,9 @@ import os
 import json
 from dotenv import load_dotenv
 
+
 load_dotenv()
+
 
 # Inicializa o aplicativo Flask
 app = Flask(__name__)
@@ -39,6 +41,18 @@ def charada_aleatoria():
 
     if charadas:
         return jsonify(random.choice(charadas)), 200  # Retorna uma charada aleatória
+    else:
+        return jsonify({'Erro': 'Nenhuma charada encontrada'}), 404  # Retorna erro se não houver charadas
+    
+@app.route('/charadas/lista', methods=['GET'])
+def charada_lista():
+    charadas = []
+    lista = db.collection('charadas').stream()  # Busca todas as charadas no Firestore
+    for item in lista:
+        charadas.append(item.to_dict())  # Converte os documentos em dicionários
+
+    if charadas:
+        return jsonify(charadas), 200  # Retorna uma charada aleatória
     else:
         return jsonify({'Erro': 'Nenhuma charada encontrada'}), 404  # Retorna erro se não houver charadas
 
