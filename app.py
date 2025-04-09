@@ -7,9 +7,7 @@ import os
 import json
 from dotenv import load_dotenv
 
-
 load_dotenv()
-
 
 # Inicializa o aplicativo Flask
 app = Flask(__name__)
@@ -90,7 +88,7 @@ def adicionar_charada():
         "resposta": dados['resposta']
     })
 
-    return jsonify({'Mensagem': 'Charada cadastrada com sucesso'}), 201  # Retorna mensagem de sucesso
+    return jsonify({'mensagem': 'Charada cadastrada com sucesso'}), 201  # Retorna mensagem de sucesso
 
 # Rota para alterar uma charada existente pelo ID
 @app.route('/charadas/<id>', methods=['PUT'])
